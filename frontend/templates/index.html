@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Signup System</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tab-container">
+        <div class="tab-header">
+          <div class="tab-btn active" data-tab="login">Login</div>
+          <div class="tab-btn" data-tab="signup">Signup</div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required />
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required />
+              </div>
+              <button type="submit">Login</button>
+            </form>
+            <div id="login-message" class="message"></div>
+          </div>
+          <div class="tab-pane" id="signup">
+            <h2>Signup</h2>
+            <form id="signup-form">
+              <div class="form-group">
+                <label for="signup-name">Name</label>
+                <input type="text" id="signup-name" required />
+              </div>
+              <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required />
+              </div>
+              <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required />
+              </div>
+              <button type="submit">Signup</button>
+            </form>
+            <div id="signup-message" class="message"></div>
+          </div>
+        </div>
+      </div>
+      <div id="welcome-section" class="hidden">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+        <p>You're now logged in to the system.</p>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
